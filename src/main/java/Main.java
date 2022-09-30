@@ -9,8 +9,10 @@ public class Main {
         int choose1 = 1;
         int choose2 = 1;
         int i;
-        int j;
-        int k;
+        Bus bus1 = new Bus(gas, speed);
+        Bus bus2 = new Bus(gas, speed);
+        Taxi taxi1 = new Taxi(gas, speed);
+        Taxi taxi2 = new Taxi(gas, speed);
         while(choose!=0) {
             Scanner scan = new Scanner(System.in);
             System.out.println("대중교통 프로그램\n1. 버스\n2. 택시\n0. 종료");
@@ -20,8 +22,6 @@ public class Main {
             switch (i) {
                 case 1:
                     choose1 = 1;
-                    Bus bus1 = new Bus(gas, speed);
-                    Bus bus2 = new Bus(gas, speed);
                     while (choose1 !=0) {
                         System.out.println("버스를 2대 생성하였습니다. 어떤 버스를 선택하시겠습니까?\n\n1. 1번 버스\n2. 2번 버스\n0. 종료");
                         i = scan.nextInt();
@@ -43,8 +43,6 @@ public class Main {
                     break;
                 case 2:
                     choose2 = 1;
-                    Taxi taxi1 = new Taxi(gas, speed);
-                    Taxi taxi2 = new Taxi(gas, speed);
                     while (choose2 !=0) {
                         System.out.println("택시를 2대 생성하였습니다. 어떤 택시를 선택하시겠습니까?\n\n1. 1번 택시\n2. 2번 택시\n0. 종료");
                         i = scan.nextInt();
